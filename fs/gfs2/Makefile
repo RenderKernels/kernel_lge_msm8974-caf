@@ -8,3 +8,6 @@ gfs2-y := acl.o bmap.o dir.o xattr.o glock.o \
 
 gfs2-$(CONFIG_GFS2_FS_LOCKING_DLM) += lock_dlm.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

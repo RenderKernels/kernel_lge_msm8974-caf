@@ -15,3 +15,6 @@ obj-$(CONFIG_ORINOCO_USB)	+= orinoco_usb.o
 
 # Orinoco should be endian clean.
 ccflags-y += -D__CHECK_ENDIAN__
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

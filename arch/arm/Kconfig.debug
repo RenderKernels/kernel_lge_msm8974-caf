@@ -30,6 +30,10 @@ config FRAME_POINTER
 	  when a problem occurs with the kernel, the information that is
 	  reported is severely limited.
 
+config STRICT_ALIASING
+	default n
+	bool "Strict Aliasing"
+
 config ARM_UNWIND
 	bool "Enable stack unwinding support (EXPERIMENTAL)"
 	depends on AEABI && EXPERIMENTAL

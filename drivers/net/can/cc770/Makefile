@@ -7,3 +7,6 @@ obj-$(CONFIG_CAN_CC770_ISA) += cc770_isa.o
 obj-$(CONFIG_CAN_CC770_PLATFORM) += cc770_platform.o
 
 ccflags-$(CONFIG_CAN_DEBUG_DEVICES) := -DDEBUG
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

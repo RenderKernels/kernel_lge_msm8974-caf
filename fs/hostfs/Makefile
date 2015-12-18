@@ -9,3 +9,6 @@ obj-y :=
 obj-$(CONFIG_HOSTFS) += hostfs.o
 
 include arch/um/scripts/Makefile.rules
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

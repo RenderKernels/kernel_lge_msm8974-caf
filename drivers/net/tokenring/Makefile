@@ -14,3 +14,6 @@ obj-$(CONFIG_TMSPCI)	+= tmspci.o
 obj-$(CONFIG_SKISA)	+= skisa.o
 obj-$(CONFIG_SMCTR)	+= smctr.o
 obj-$(CONFIG_3C359)	+= 3c359.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

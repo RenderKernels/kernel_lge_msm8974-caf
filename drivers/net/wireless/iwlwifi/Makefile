@@ -24,3 +24,6 @@ iwlwifi-$(CONFIG_IWLWIFI_DEVICE_TESTMODE) += iwl-testmode.o
 CFLAGS_iwl-devtrace.o := -I$(src)
 
 ccflags-y += -D__CHECK_ENDIAN__
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

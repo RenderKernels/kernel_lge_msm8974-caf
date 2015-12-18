@@ -26,3 +26,6 @@ dccp-$(CONFIG_SYSCTL) += sysctl.o
 
 dccp_diag-y := diag.o
 dccp_probe-y := probe.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

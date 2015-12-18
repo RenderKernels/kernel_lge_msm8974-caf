@@ -49,3 +49,6 @@ MODULEPFX := brcmsmac
 
 obj-$(CONFIG_BRCMSMAC)	+= $(MODULEPFX).o
 $(MODULEPFX)-objs	= $(BRCMSMAC_OFILES)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

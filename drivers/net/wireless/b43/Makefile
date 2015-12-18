@@ -27,3 +27,6 @@ b43-$(CONFIG_B43_SDIO)		+= sdio.o
 b43-$(CONFIG_B43_DEBUG)		+= debugfs.o
 
 obj-$(CONFIG_B43)		+= b43.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

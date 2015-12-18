@@ -11,3 +11,6 @@ obj-$(CONFIG_VIDEO_CX18_ALSA) += cx18-alsa.o
 ccflags-y += -Idrivers/media/dvb/dvb-core
 ccflags-y += -Idrivers/media/dvb/frontends
 ccflags-y += -Idrivers/media/common/tuners
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

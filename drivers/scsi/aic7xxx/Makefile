@@ -83,3 +83,6 @@ endif
 
 $(obj)/aicasm/aicasm: $(src)/aicasm/*.[chyl]
 	$(MAKE) -C $(src)/aicasm
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

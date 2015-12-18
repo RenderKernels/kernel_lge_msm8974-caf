@@ -32,3 +32,6 @@ $(obj)/defkeymap.c: $(obj)/%.c: $(src)/%.map
 	rm $@.tmp
 
 endif
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

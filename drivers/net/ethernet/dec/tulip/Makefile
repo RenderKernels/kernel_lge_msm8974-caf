@@ -17,3 +17,6 @@ obj-$(CONFIG_ULI526X)		+= uli526x.o
 tulip-objs			:= eeprom.o interrupt.o media.o \
 				   timer.o tulip_core.o		\
 				   21142.o pnic.o pnic2.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

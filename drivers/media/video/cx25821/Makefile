@@ -11,3 +11,6 @@ ccflags-y := -Idrivers/media/video
 ccflags-y += -Idrivers/media/common/tuners
 ccflags-y += -Idrivers/media/dvb/dvb-core
 ccflags-y += -Idrivers/media/dvb/frontends
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

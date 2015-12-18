@@ -11,3 +11,6 @@ tipc-y	+= addr.o bcast.o bearer.o config.o \
 	   socket.o log.o eth_media.o
 
 # End of file
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

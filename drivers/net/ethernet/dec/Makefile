@@ -4,3 +4,6 @@
 
 obj-$(CONFIG_EWRK3) += ewrk3.o
 obj-$(CONFIG_NET_TULIP) += tulip/
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

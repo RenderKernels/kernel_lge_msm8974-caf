@@ -11,3 +11,6 @@ obj-$(CONFIG_TABLET_USB_GTCO)	+= gtco.o
 obj-$(CONFIG_TABLET_USB_HANWANG) += hanwang.o
 obj-$(CONFIG_TABLET_USB_KBTAB)	+= kbtab.o
 obj-$(CONFIG_TABLET_USB_WACOM)	+= wacom.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -3,3 +3,6 @@
 #
 
 obj-$(CONFIG_GRETH) += greth.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -15,3 +15,6 @@ lmc-objs := lmc_debug.o lmc_media.o lmc_main.o lmc_proto.o
 # -DLMC_PACKET_LOG
 
 ccflags-y := -I. $(DBGDEF)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

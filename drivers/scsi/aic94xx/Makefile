@@ -35,3 +35,6 @@ aic94xx-y += aic94xx_init.o \
 	     aic94xx_dev.o  \
 	     aic94xx_tmf.o  \
 	     aic94xx_task.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

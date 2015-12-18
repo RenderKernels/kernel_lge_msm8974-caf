@@ -11,3 +11,6 @@ logfs-y	+= segment.o
 logfs-y	+= super.o
 logfs-$(CONFIG_BLOCK)	+= dev_bdev.o
 logfs-$(CONFIG_MTD)	+= dev_mtd.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -26,3 +26,6 @@ MODULEPFX := brcmutil
 
 obj-$(CONFIG_BRCMUTIL)	+= $(MODULEPFX).o
 $(MODULEPFX)-objs	= $(BRCMUTIL_OFILES)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

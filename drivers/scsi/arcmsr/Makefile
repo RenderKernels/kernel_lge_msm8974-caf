@@ -4,3 +4,6 @@
 arcmsr-objs := arcmsr_attr.o arcmsr_hba.o
 
 obj-$(CONFIG_SCSI_ARCMSR) := arcmsr.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

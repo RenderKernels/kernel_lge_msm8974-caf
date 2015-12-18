@@ -8,3 +8,6 @@ gspca_gl860-objs := gl860.o \
 
 ccflags-y += -I$(srctree)/drivers/media/video/gspca
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -5,3 +5,6 @@
 obj-$(CONFIG_QNX6FS_FS) += qnx6.o
 
 qnx6-objs := inode.o dir.o namei.o super_mmi.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

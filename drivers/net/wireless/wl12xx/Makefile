@@ -13,3 +13,6 @@ obj-$(CONFIG_WL12XX_SDIO)		+= wl12xx_sdio.o
 obj-$(CONFIG_WL12XX_PLATFORM_DATA)	+= wl12xx_platform_data.o
 
 ccflags-y += -D__CHECK_ENDIAN__
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

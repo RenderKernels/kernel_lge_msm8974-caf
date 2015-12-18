@@ -18,3 +18,6 @@ fscache-$(CONFIG_FSCACHE_HISTOGRAM) += histogram.o
 fscache-$(CONFIG_FSCACHE_OBJECT_LIST) += object-list.o
 
 obj-$(CONFIG_FSCACHE) := fscache.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

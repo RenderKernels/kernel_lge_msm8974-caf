@@ -36,3 +36,6 @@ ixgbevf-objs := vf.o \
                 ethtool.o \
                 ixgbevf_main.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

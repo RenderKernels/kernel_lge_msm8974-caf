@@ -4,3 +4,6 @@ ifeq ($(CONFIG_MEDIA_CONTROLLER),y)
 uvcvideo-objs  += uvc_entity.o
 endif
 obj-$(CONFIG_USB_VIDEO_CLASS) += uvcvideo.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

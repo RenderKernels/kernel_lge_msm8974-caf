@@ -8,3 +8,6 @@ tile_net-objs := tilegx.o mpipe.o iorpc_mpipe.o dma_queue.o
 else
 tile_net-objs := tilepro.o
 endif
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

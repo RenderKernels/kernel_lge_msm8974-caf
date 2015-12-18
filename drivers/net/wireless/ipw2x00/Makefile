@@ -12,3 +12,6 @@ libipw-objs := \
 	libipw_rx.o \
 	libipw_wx.o \
 	libipw_geo.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

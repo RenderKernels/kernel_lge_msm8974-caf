@@ -7,3 +7,6 @@ obj-$(CONFIG_CAN_ESD_USB2) += esd_usb2.o
 obj-$(CONFIG_CAN_PEAK_USB) += peak_usb/
 
 ccflags-$(CONFIG_CAN_DEBUG_DEVICES) := -DDEBUG
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

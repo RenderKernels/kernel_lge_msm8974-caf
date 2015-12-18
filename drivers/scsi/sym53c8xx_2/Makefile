@@ -2,3 +2,6 @@
 
 sym53c8xx-objs := sym_fw.o sym_glue.o sym_hipd.o sym_malloc.o sym_nvram.o
 obj-$(CONFIG_SCSI_SYM53C8XX_2) := sym53c8xx.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

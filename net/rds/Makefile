@@ -17,3 +17,6 @@ rds_tcp-y :=		tcp.o tcp_connect.o tcp_listen.o tcp_recv.o \
 
 ccflags-$(CONFIG_RDS_DEBUG)	:=	-DDEBUG
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

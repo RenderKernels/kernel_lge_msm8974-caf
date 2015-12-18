@@ -9,3 +9,6 @@ gspca_m5602-objs := m5602_core.o \
 		    m5602_s5k4aa.o
 
 ccflags-y += -I$(srctree)/drivers/media/video/gspca
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

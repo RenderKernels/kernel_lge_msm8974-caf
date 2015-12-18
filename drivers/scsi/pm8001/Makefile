@@ -10,3 +10,6 @@ pm8001-y += pm8001_init.o \
 		pm8001_ctl.o  \
 		pm8001_hwi.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

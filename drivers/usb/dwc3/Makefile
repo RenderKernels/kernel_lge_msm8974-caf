@@ -50,3 +50,5 @@ ifneq ($(CONFIG_PCI),)
 	obj-$(CONFIG_USB_DWC3)		+= dwc3-pci.o
 endif
 
+
+CFLAGS_KERNEL += -fno-strict-aliasing

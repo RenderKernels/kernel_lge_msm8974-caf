@@ -51,3 +51,6 @@ clean:
 clean_all: clean clean_compvers
 
 .PHONY: all release clean epivers compvers clean_compvers
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

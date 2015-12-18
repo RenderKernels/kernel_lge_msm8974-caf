@@ -7,3 +7,6 @@ zd1211rw-objs := zd_chip.o zd_mac.o \
 
 ccflags-$(CONFIG_ZD1211RW_DEBUG) := -DDEBUG
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

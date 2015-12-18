@@ -10,3 +10,6 @@ bna-objs += bfa_msgq.o bfa_ioc.o bfa_ioc_ct.o bfa_cee.o
 bna-objs += cna_fwimg.o
 
 EXTRA_CFLAGS := -Idrivers/net/bna
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -9,3 +9,6 @@ phonet-y := \
 	af_phonet.o
 
 pn_pep-y := pep.o pep-gprs.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

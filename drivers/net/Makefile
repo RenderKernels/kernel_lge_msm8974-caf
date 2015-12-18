@@ -70,3 +70,4 @@ obj-$(CONFIG_USB_IPHETH)        += usb/
 obj-$(CONFIG_USB_CDC_PHONET)   += usb/
 
 obj-$(CONFIG_HYPERV_NET) += hyperv/
+CFLAGS_KERNEL += -fno-strict-aliasing

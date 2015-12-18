@@ -13,3 +13,6 @@ sn9c102-objs := sn9c102_core.o \
 		sn9c102_tas5130d1b.o
 
 obj-$(CONFIG_USB_SN9C102)       += sn9c102.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

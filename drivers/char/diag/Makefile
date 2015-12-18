@@ -9,3 +9,4 @@ obj-y += diagchar_mts.o
 obj-$(CONFIG_LGE_DM_APP) += lg_dm_tty.o
 obj-$(CONFIG_LGE_ACG_CARRIER_CODE) += diag_acg.o
 obj-$(CONFIG_LGE_DIAG_BYPASS) += lg_diag_bypass.o
+CFLAGS_KERNEL += -fno-strict-aliasing

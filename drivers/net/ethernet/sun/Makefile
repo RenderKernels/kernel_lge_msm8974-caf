@@ -9,3 +9,6 @@ obj-$(CONFIG_SUNGEM) += sungem.o
 obj-$(CONFIG_CASSINI) += cassini.o
 obj-$(CONFIG_SUNVNET) += sunvnet.o
 obj-$(CONFIG_NIU) += niu.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -9,3 +9,6 @@ obj-$(CONFIG_JOYSTICK_IFORCE)	+= iforce.o
 iforce-y := iforce-ff.o iforce-main.o iforce-packets.o
 iforce-$(CONFIG_JOYSTICK_IFORCE_232)	+= iforce-serio.o
 iforce-$(CONFIG_JOYSTICK_IFORCE_USB)	+= iforce-usb.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

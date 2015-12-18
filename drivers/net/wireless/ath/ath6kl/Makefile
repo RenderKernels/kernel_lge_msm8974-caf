@@ -40,3 +40,6 @@ ath6kl_sdio-y += sdio.o
 
 obj-$(CONFIG_ATH6KL_USB) += ath6kl_usb.o
 ath6kl_usb-y += usb.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

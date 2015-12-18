@@ -78,3 +78,6 @@ aicasm_scan.c: aicasm_scan.l
 
 aicasm_macro_scan.c: aicasm_macro_scan.l
 	$(LEX) $(LFLAGS) -Pmm -o$@ $<
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -13,3 +13,6 @@ obj-y	+= netlabel_mgmt.o
 obj-y	+= netlabel_unlabeled.o
 obj-y	+= netlabel_cipso_v4.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

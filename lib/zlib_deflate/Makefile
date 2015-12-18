@@ -9,3 +9,6 @@
 obj-$(CONFIG_ZLIB_DEFLATE) += zlib_deflate.o
 
 zlib_deflate-objs := deflate.o deftree.o deflate_syms.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

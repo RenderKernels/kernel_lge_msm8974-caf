@@ -12,3 +12,6 @@ ifdef CONFIG_ARCH_MSM7X27A
 endif
 
 obj-$(CONFIG_LIBRA_SDIOIF) += librasdioif.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

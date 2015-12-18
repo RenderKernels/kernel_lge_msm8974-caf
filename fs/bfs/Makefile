@@ -5,3 +5,6 @@
 obj-$(CONFIG_BFS_FS) += bfs.o
 
 bfs-objs := inode.o file.o dir.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

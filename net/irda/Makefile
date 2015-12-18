@@ -13,3 +13,6 @@ irda-y := iriap.o iriap_event.o irlmp.o irlmp_event.o irlmp_frame.o \
 	  discovery.o parameters.o irnetlink.o irmod.o
 irda-$(CONFIG_PROC_FS) += irproc.o
 irda-$(CONFIG_SYSCTL) += irsysctl.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

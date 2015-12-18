@@ -73,3 +73,6 @@ quiet_cmd_mktable = TABLE   $@
 targets += tables.c
 $(obj)/tables.c: $(obj)/mktables FORCE
 	$(call if_changed,mktable)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

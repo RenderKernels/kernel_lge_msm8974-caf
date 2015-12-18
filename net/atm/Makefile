@@ -13,3 +13,6 @@ atm-$(CONFIG_PROC_FS) += proc.o
 obj-$(CONFIG_ATM_LANE) += lec.o
 obj-$(CONFIG_ATM_MPOA) += mpoa.o
 obj-$(CONFIG_PPPOATM) += pppoatm.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -5,3 +5,6 @@
 obj-$(CONFIG_QNX4FS_FS) += qnx4.o
 
 qnx4-objs := inode.o dir.o namei.o bitmap.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

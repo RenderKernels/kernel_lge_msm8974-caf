@@ -66,3 +66,6 @@ obj-$(CONFIG_BRCMSMAC)	+= brcm80211/
 
 obj-$(CONFIG_LIBRA_SDIOIF)	+= libra/
 obj-$(CONFIG_WCNSS_CORE)	+= wcnss/
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

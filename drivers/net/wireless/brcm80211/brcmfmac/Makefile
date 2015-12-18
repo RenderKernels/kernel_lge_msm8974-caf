@@ -34,3 +34,6 @@ brcmfmac-$(CONFIG_BRCMFMAC_SDIO) += \
 		sdio_chip.o
 brcmfmac-$(CONFIG_BRCMFMAC_USB) += \
 		usb.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -4,3 +4,6 @@
 
 obj-$(CONFIG_ARM_AT91_ETHER) += at91_ether.o
 obj-$(CONFIG_MACB) += macb.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

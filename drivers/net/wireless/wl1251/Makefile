@@ -8,3 +8,6 @@ obj-$(CONFIG_WL1251_SPI)	+= wl1251_spi.o
 obj-$(CONFIG_WL1251_SDIO)	+= wl1251_sdio.o
 
 ccflags-y += -D__CHECK_ENDIAN__
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

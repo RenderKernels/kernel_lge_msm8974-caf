@@ -10,3 +10,6 @@ obj-$(CONFIG_IGBVF) += igbvf/
 obj-$(CONFIG_IXGBE) += ixgbe/
 obj-$(CONFIG_IXGBEVF) += ixgbevf/
 obj-$(CONFIG_IXGB) += ixgb/
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

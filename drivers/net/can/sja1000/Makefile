@@ -15,3 +15,6 @@ obj-$(CONFIG_CAN_PLX_PCI) += plx_pci.o
 obj-$(CONFIG_CAN_TSCAN1) += tscan1.o
 
 ccflags-$(CONFIG_CAN_DEBUG_DEVICES) := -DDEBUG
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

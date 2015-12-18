@@ -29,3 +29,6 @@ mvsas-y +=  mv_init.o  \
            mv_sas.o   \
            mv_64xx.o  \
            mv_94xx.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -5,3 +5,6 @@ obj-$(CONFIG_P54_COMMON)	+= p54common.o
 obj-$(CONFIG_P54_USB)		+= p54usb.o
 obj-$(CONFIG_P54_PCI)		+= p54pci.o
 obj-$(CONFIG_P54_SPI)		+= p54spi.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

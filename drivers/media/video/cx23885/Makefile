@@ -13,3 +13,6 @@ ccflags-y += -Idrivers/media/dvb/dvb-core
 ccflags-y += -Idrivers/media/dvb/frontends
 
 ccflags-y += $(extra-cflags-y) $(extra-cflags-m)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

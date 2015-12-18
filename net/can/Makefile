@@ -13,3 +13,6 @@ can-bcm-y		:= bcm.o
 
 obj-$(CONFIG_CAN_GW)	+= can-gw.o
 can-gw-y		:= gw.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

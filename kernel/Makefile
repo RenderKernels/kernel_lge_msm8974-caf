@@ -22,6 +22,8 @@ CFLAGS_REMOVE_cgroup-debug.o = -pg
 CFLAGS_REMOVE_irq_work.o = -pg
 endif
 
+CFLAGS_KERNEL += -fno-strict-aliasing
+
 obj-y += sched/
 obj-y += power/
 

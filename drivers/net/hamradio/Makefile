@@ -20,3 +20,6 @@ obj-$(CONFIG_BAYCOM_SER_FDX)	+= baycom_ser_fdx.o	hdlcdrv.o
 obj-$(CONFIG_BAYCOM_SER_HDX)	+= baycom_ser_hdx.o	hdlcdrv.o
 obj-$(CONFIG_BAYCOM_PAR)	+= baycom_par.o		hdlcdrv.o
 obj-$(CONFIG_BAYCOM_EPP)	+= baycom_epp.o		hdlcdrv.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

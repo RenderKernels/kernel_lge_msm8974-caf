@@ -6,3 +6,6 @@ isci-objs := init.o phy.o request.o \
 	     remote_node_table.o \
 	     unsolicited_frame_control.o \
 	     port_config.o \
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

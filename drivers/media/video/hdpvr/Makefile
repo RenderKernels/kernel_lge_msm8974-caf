@@ -5,3 +5,6 @@ obj-$(CONFIG_VIDEO_HDPVR) += hdpvr.o
 ccflags-y += -Idrivers/media/video
 
 ccflags-y += $(extra-cflags-y) $(extra-cflags-m)
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -3,3 +3,6 @@
 #
 
 obj-$(CONFIG_TSI108_ETH) += tsi108_eth.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

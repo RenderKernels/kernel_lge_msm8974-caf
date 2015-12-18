@@ -19,3 +19,6 @@ jffs2-$(CONFIG_JFFS2_RTIME)	+= compr_rtime.o
 jffs2-$(CONFIG_JFFS2_ZLIB)	+= compr_zlib.o
 jffs2-$(CONFIG_JFFS2_LZO)	+= compr_lzo.o
 jffs2-$(CONFIG_JFFS2_SUMMARY)   += summary.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -16,3 +16,6 @@ obj-$(CONFIG_NET_9P_RDMA) += 9pnet_rdma.o
 
 9pnet_rdma-objs := \
 	trans_rdma.o \
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -28,3 +28,6 @@ i2400m-sdio-y := 		\
 	sdio-tx.o   		\
 	sdio-fw.o	 	\
 	sdio-rx.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

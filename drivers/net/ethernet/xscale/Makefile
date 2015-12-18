@@ -4,3 +4,6 @@
 
 obj-$(CONFIG_ENP2611_MSF_NET) += ixp2000/
 obj-$(CONFIG_IXP4XX_ETH) += ixp4xx_eth.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

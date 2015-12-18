@@ -13,3 +13,6 @@ fnic-y	:= \
 	vnic_rq.o \
 	vnic_wq_copy.o \
 	vnic_wq.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

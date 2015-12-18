@@ -12,3 +12,6 @@ libfc-objs := \
 	fc_rport.o \
 	fc_fcp.o \
 	fc_npiv.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

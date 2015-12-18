@@ -13,3 +13,6 @@ obj-$(CONFIG_CAIF_SHM) += caif_shm.o
 
 # HSI interface
 obj-$(CONFIG_CAIF_HSI) += caif_hsi.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

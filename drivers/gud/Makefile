@@ -5,6 +5,7 @@ GUD_ROOT_FOLDER := drivers/gud
 # add our modules to kernel.
 obj-$(CONFIG_MOBICORE_API) += mcKernelApi.o
 obj-$(CONFIG_MOBICORE_SUPPORT) += mcDrvModule.o
+CFLAGS_KERNEL += -fno-strict-aliasing
 
 mcDrvModule-objs := MobiCoreDriver/logging.o \
 		MobiCoreDriver/ops.o \

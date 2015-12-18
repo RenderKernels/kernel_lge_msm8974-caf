@@ -5,3 +5,6 @@
 obj-$(CONFIG_MINIX_FS) += minix.o
 
 minix-objs := bitmap.o itree_v1.o itree_v2.o namei.o inode.o file.o dir.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

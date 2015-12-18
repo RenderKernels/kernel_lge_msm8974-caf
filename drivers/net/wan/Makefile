@@ -66,3 +66,6 @@ $(obj)/wanxlfw.inc:	$(src)/wanxlfw.S
 	$(call if_changed_dep,build_wanxlfw)
 targets += wanxlfw.inc
 endif
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

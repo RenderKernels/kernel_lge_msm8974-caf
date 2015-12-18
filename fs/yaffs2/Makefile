@@ -15,3 +15,6 @@ yaffs-y += yaffs_yaffs2.o
 yaffs-y += yaffs_bitmap.o
 yaffs-y += yaffs_verify.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

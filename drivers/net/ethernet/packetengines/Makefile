@@ -4,3 +4,6 @@
 
 obj-$(CONFIG_HAMACHI) += hamachi.o
 obj-$(CONFIG_YELLOWFIN) += yellowfin.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

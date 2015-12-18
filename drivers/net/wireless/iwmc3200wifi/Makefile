@@ -8,3 +8,6 @@ iwmc3200wifi-$(CONFIG_IWM_TRACING) += trace.o
 CFLAGS_trace.o := -I$(src)
 
 ccflags-y += -D__CHECK_ENDIAN__
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

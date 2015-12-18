@@ -11,3 +11,6 @@ obj-$(CONFIG_SCSI_CUMANA_2)	+= cumana_2.o fas216.o queue.o msgqueue.o
 obj-$(CONFIG_SCSI_OAK1)		+= oak.o
 obj-$(CONFIG_SCSI_POWERTECSCSI)	+= powertec.o fas216.o queue.o msgqueue.o
 obj-$(CONFIG_SCSI_EESOXSCSI)	+= eesox.o fas216.o queue.o msgqueue.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

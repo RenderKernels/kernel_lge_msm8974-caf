@@ -6,3 +6,6 @@ prism54-objs := islpci_eth.o islpci_mgt.o \
 
 obj-$(CONFIG_PRISM54) += prism54.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

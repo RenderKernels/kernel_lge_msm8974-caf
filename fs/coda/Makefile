@@ -10,3 +10,6 @@ coda-objs := psdev.o cache.o cnode.o inode.o dir.o file.o upcall.o \
 # If you want debugging output, please uncomment the following line.
 
 # ccflags-y := -DDEBUG -DDEBUG_SMB_MALLOC=1
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

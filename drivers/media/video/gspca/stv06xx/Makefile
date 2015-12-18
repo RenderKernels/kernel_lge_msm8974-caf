@@ -8,3 +8,6 @@ gspca_stv06xx-objs := stv06xx.o \
 
 ccflags-y += -I$(srctree)/drivers/media/video/gspca
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

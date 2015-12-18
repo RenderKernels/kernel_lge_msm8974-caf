@@ -5,3 +5,6 @@
 obj-$(CONFIG_CONFIGFS_FS)	+= configfs.o
 
 configfs-objs	:= inode.o file.o dir.o symlink.o mount.o item.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

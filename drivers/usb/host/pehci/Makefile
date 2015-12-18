@@ -3,4 +3,3 @@
 #
 
 obj-$(CONFIG_USB_PEHCI_HCD) += hal/ host/
-

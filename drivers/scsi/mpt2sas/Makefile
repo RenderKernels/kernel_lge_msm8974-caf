@@ -5,3 +5,6 @@ mpt2sas-y +=  mpt2sas_base.o        \
 		mpt2sas_scsih.o     \
 		mpt2sas_transport.o \
 		mpt2sas_ctl.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

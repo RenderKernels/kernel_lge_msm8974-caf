@@ -8,3 +8,6 @@ decnet-y += sysctl_net_decnet.o
 
 obj-$(CONFIG_NETFILTER) += netfilter/
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -19,3 +19,6 @@ dlm-y :=			ast.o \
 				util.o 
 dlm-$(CONFIG_DLM_DEBUG) +=	debug_fs.o
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

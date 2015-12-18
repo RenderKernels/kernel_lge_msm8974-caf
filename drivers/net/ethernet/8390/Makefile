@@ -27,3 +27,6 @@ obj-$(CONFIG_ULTRA32) += smc-ultra32.o 8390.o
 obj-$(CONFIG_ULTRAMCA) += smc-mca.o 8390.o
 obj-$(CONFIG_WD80x3) += wd.o 8390.o
 obj-$(CONFIG_ZORRO8390) += zorro8390.o 8390.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

@@ -10,3 +10,6 @@ ifneq ($(CONFIG_MMU),y)
 romfs-$(CONFIG_ROMFS_ON_MTD) += mmap-nommu.o
 endif
 
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif

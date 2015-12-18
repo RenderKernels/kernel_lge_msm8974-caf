@@ -7,3 +7,6 @@ ubifs-y += recovery.o ioctl.o lpt_commit.o tnc_misc.o
 
 ubifs-$(CONFIG_UBIFS_FS_DEBUG) += debug.o
 ubifs-$(CONFIG_UBIFS_FS_XATTR) += xattr.o
+ifdef CONFIG_STRICT_ALIASING
+CFLAGS_KERNEL += -fstrict-aliasing
+endif
